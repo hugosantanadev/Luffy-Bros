@@ -1,0 +1,99 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    position: relative;
+    margin:0 auto;
+    overflow: hidden;
+    cursor: pointer;
+    background: black url(../imagens/background.jpg) center center no-repeat fixed ;
+}
+
+.player{
+    position:absolute;
+    bottom: 0;
+    width: 120px;
+    
+}
+
+.op{
+    position: fixed;
+    max-width: 30%;
+    max-height: 30%;
+    margin: auto;
+    left: 30%;
+    right: 30%;
+}
+
+.obstaculo{
+    position: absolute;
+    bottom: -7px;
+    width: 80px;
+    animation: obstaculo-animation 1.5s infinite linear;
+    
+}
+
+#pontuacao{
+    font-size: 40px;
+    margin: 30px;
+    color: rgb(red, green, blue);
+    position: absolute;
+    font-family: 'Tilt Prism', cursive;
+    position: relative;
+
+}
+
+.jump{
+    animation: jump 500ms linear;
+}
+@keyframes obstaculo-animation{
+    from{
+        right:-80px;
+    }
+
+    to{
+        right:100%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0%;
+    }
+
+   
+    50%{
+        bottom: 20%;
+    }
+
+    60% {
+        bottom:20%;
+    }
+
+    70%{
+        bottom:25%
+    }
+    80%{
+        bottom: 30%;
+    } 
+    90%{
+        bottom: 25%;
+    }
+    95%{
+        bottom: 15%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}
