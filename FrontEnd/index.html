@@ -2,24 +2,40 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Luffy Bros</title>
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
 
     <div class="game-board">
+        <div class="login-screen" id="loginScreen">
+            <h2>Luffy Bros</h2>
+            <input type="text" id="usernameInput" placeholder="Digite seu nome..." maxlength="12">
+            <button id="startButton">Iniciar Jogo</button>
+        </div>
+
+        <div class="leaderboard-panel" id="leaderboardPanel">
+            <h3>🏆 Top 5</h3>
+            <ol id="leaderboardList">
+                <li>Carregando...</li>
+            </ol>
+        </div>
+
         <div class="score-container">Score: <span id="score">0</span></div>
         
         <img src="imagens/background.jpg" class="clouds" alt="Cenário de Fundo">
-        <img src="imagens/luffy.gif" class="luffy" id="luffy" alt="Luffy">
-        <img src="imagens/obstaculo.png" class="pipe" id="pipe" alt="Obstáculo">
+        <img src="imagens/luffy.gif" class="luffy" id="luffy" alt="Luffy" style="display: none;">
+        <img src="imagens/obstaculo.png" class="pipe" id="pipe" alt="Obstáculo" style="display: none;">
         
         <div class="game-over-screen" id="gameOverScreen">
             <h1>Game Over</h1>
-            <p>Pressione qualquer tecla ou toque na tela para reiniciar</p>
+            <p>Pressione qualquer tecla ou toque para reiniciar</p>
         </div>
     </div>
+
+    <audio id="bgMusic" src="imagens/musica-fundo.mp3" loop></audio>
 
     <script src="script/script.js"></script>
 </body>
