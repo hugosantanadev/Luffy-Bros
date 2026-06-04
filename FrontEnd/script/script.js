@@ -8,7 +8,7 @@ const startButton = document.getElementById('startButton');
 const leaderboardList = document.getElementById('leaderboardList');
 const bgMusic = document.getElementById('bgMusic');
 
-const API_URL = 'http://localhost:8080/api/scores';
+const API_URL = 'https://luffy-bros-api.onrender.com/api/scores';
 
 let score = 0;
 let isGameOver = false;
